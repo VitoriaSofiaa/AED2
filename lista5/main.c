@@ -15,7 +15,7 @@ int main() {
     preOrdem_ArvBin(raiz);
     printf("\n");
 
-    // Testando remoção
+    // testando remoção
     if (remove_ArvBin(raiz, 50)) {
         printf("\nRemovido com sucesso!\n");
     } else {
@@ -30,3 +30,4 @@ int main() {
     printf("\nFim!\n");
     return 0;
 }
+
