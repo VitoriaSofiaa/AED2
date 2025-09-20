@@ -123,7 +123,7 @@ void posOrdem_ArvBin(ArvBin *raiz) {
     }
 }
 
-// ===== Funções auxiliares para remoção =====
+// funções auxiliares para remoção 
 struct NO* procuraMenor(struct NO* atual) {
     struct NO *no1 = atual;
     struct NO *no2 = atual->esq;
@@ -150,7 +150,7 @@ int remove_ArvBin(ArvBin *raiz, int valor) {
 
     if (atual == NULL) return 0; // não encontrado
 
-    // Caso 1 ou 2: 0 ou 1 filho
+    // caso 1 ou 2: 0 ou 1 filho
     if (atual->esq == NULL || atual->dir == NULL) {
         struct NO* temp;
         if (atual->esq != NULL)
@@ -168,7 +168,7 @@ int remove_ArvBin(ArvBin *raiz, int valor) {
         }
         free(atual);
     } else {
-        // Caso 3: dois filhos
+        // caso 3: dois filhos
         struct NO* sucessor = procuraMenor(atual->dir);
         int valorSucessor = sucessor->info;
         remove_ArvBin(&(atual->dir), valorSucessor);
@@ -176,3 +176,4 @@ int remove_ArvBin(ArvBin *raiz, int valor) {
     }
     return 1;
 }
+
